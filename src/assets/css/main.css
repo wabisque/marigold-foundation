@@ -1,0 +1,35 @@
+@import url("@/assets/css/all.min.css");
+
+:root {
+    --x-background-color: #f5e6fc;
+    --x-foreground-color: #2b262c;
+    --x-mute-color: #706770;
+    --x-primary-color: #bf36fe;
+    --x-primary-complement-color: #f5e6fc;
+    
+    font-size: 14px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --x-background-color: #2b262c;
+        --x-foreground-color: #f5e6fc;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    color: inherit;
+    font-family: sans-serif, Poppins;
+    line-height: 1.5;
+    position: relative;
+    transition-duration: 120ms;
+    transition-property: background-color, color, fill, stroke;
+    transition-timing-function: ease-out;
+}
+
+body {
+    background-color: var(--x-background-color);
+    color: var(--x-foreground-color);
+    margin: 0px;
+}
