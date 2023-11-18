@@ -1,19 +1,19 @@
 @import url("@/assets/css/all.min.css");
 
 :root {
-    --x-background-color: #f5e6fc;
-    --x-foreground-color: #2b262c;
-    --x-mute-color: #706770;
-    --x-primary-color: #bf36fe;
-    --x-primary-complement-color: #f5e6fc;
+    --x-background-color: #effff7;
+    --x-foreground-color: #272928;
+    --x-mute-color: #848b88;
+    --x-primary-color: #17ff83;
+    --x-primary-complement-color: #effff7;
     
     font-size: 14px;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --x-background-color: #2b262c;
-        --x-foreground-color: #f5e6fc;
+        --x-background-color: #272928;
+        --x-foreground-color: #effff7;
     }
 }
 
