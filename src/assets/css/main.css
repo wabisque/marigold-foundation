@@ -1,35 +1,43 @@
 @import url("@/assets/css/all.min.css");
 
 :root {
-    --x-background-color: #effff7;
-    --x-foreground-color: #272928;
-    --x-mute-color: #848b88;
-    --x-primary-color: #17ff83;
-    --x-primary-complement-color: #effff7;
-    
-    font-size: 14px;
+  --x-background-color: #f6f2eb;
+  --x-surface-color: #fffefd;
+  --x-foreground-color: #252421;
+  --x-mute-color: #787876;
+  --x-primary-color: #fca311;
+  --x-primary-complement-color: #fffefd;
+  --x-shadow-color: #31302d1f;
+
+  font-size: 16px;
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --x-background-color: #272928;
-        --x-foreground-color: #effff7;
-    }
+  :root {
+    --x-background-color: #252421;
+    --x-surface-color: #31302d;
+    --x-foreground-color: #fffefd;
+    --x-primary-color: #dca64e;
+    --x-primary-complement-color: #31302d;
+    --x-shadow-color: #fffefd1f;
+  }
 }
 
 * {
-    box-sizing: border-box;
-    color: inherit;
-    font-family: sans-serif, Poppins;
-    line-height: 1.5;
-    position: relative;
-    transition-duration: 120ms;
-    transition-property: background-color, color, fill, stroke;
-    transition-timing-function: ease-out;
+  box-sizing: border-box;
+  color: inherit;
+  font-family: Rubik, sans-serif;
+  line-height: 1.5;
+  position: relative;
+  transition-duration: 120ms;
+  transition-property: background-color, color, fill, stroke;
+  transition-timing-function: ease-out;
 }
 
 body {
-    background-color: var(--x-background-color);
-    color: var(--x-foreground-color);
-    margin: 0px;
+  background-color: var(--x-background-color);
+  color: var(--x-foreground-color);
+  margin: 0px;
+  overflow: hidden auto;
+  width: 100%;
 }

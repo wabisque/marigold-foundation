@@ -1,14 +1,20 @@
 <script setup>
+import HorizontalLogoComponent from '@/components/HorizontalLogoComponent.vue';
+
+const emit = defineEmits([
+  'info'
+]);
 </script>
 
 <template>
   <header class="x-header-component">
-    <div class="logo-wrapper">
-      <div class="logo"></div>
-    </div>
+    <horizontal-logo-component class="logo"/>
 
-    <button class="info">
-      <i class="icon fa-solid fa-bars"></i>
+    <button
+      class="info"
+      @click="emit('info', $event)"
+    >
+      <i class="icon fa-solid fa-info"></i>
     </button>
   </header>
 </template>
@@ -18,21 +24,15 @@
   align-items: center;
   border-bottom: 1px solid var(--x-foreground-color);
   display: flex;
-  gap: 2.5rem;
+  gap: 1.5rem;
+  height: 7.5rem;
   justify-content: space-between;
-  padding: 0px 2.5rem;
+  padding: 0px 1.5rem;
+  width: 100%;
 }
 
-.x-header-component > .logo-wrapper {
-  border-right: 1px solid var(--x-foreground-color);
-  padding: 1.5rem 2.5rem 1.5rem 0px;
-}
-
-.x-header-component > .logo-wrapper > .logo {
-  background-color: var(--x-foreground-color);
-  border-radius: 0.75rem;
-  height: 4.5rem;
-  width: 15rem;
+.x-header-component > .logo {
+  width: 13.5rem;
 }
 
 .x-header-component > .info {
@@ -45,13 +45,20 @@
 
 .x-header-component > .info > .icon {
   font-size: 1.5rem;
+  width: 1.5rem;
 }
 
 .x-header-component > .info:hover {
-  background-color: var(--x-foreground-color);
+  background-color: var(--x-surface-color);
 }
 
 .x-header-component > .info:hover > .icon {
-  color: var(--x-background-color);
+  color: var(--x-primary-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .x-header-component {
+    padding: 0px 2.5rem;
+  }
 }
 </style>
